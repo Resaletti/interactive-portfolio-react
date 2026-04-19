@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Define the character set used by the page. -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the layout adapt correctly on phones, tablets, and desktops. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Text that appears in the browser tab. -->
+  <title>Renato Saletti Santos</title>
+
+  <!-- Connects this HTML page with the external CSS file. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="experience-page">
+  <!-- Main area of the professional experience page. -->
+  <main class="page section-layout">
+    <!-- Top navigation menu for returning or visiting other sections. -->
+    <nav class="top-menu" aria-label="Main navigation">
+      <!-- Sends the user back to the home page. -->
+      <a class="menu-button" href="index.html">Home</a>
+
+      <!-- Current section link. -->
+      <a class="menu-button active" href="professional-experience.html">Professional Experience</a>
+      <a class="menu-button" href="education.html">Education and Skills</a>
+
+      <!-- Buttons reserved for future sections. -->
+      <a class="menu-button" href="portfolio.html">Portfolio</a>
+      <a class="menu-button" href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Title that explains what this page is about. -->
+    <header class="section-header">
+      <h1>Professional Experience</h1>
+      <p>Select one experience to read more details.</p>
+    </header>
+
+    <!-- Side buttons that open the information sheet. -->
+    <section class="side-menu" aria-label="Experience sections">
+      <button class="side-button" type="button" data-section="pm">Policia Militar do Estado de Sao Paulo</button>
+      <button class="side-button" type="button" data-section="apm">APMDFESP</button>
+      <button class="side-button" type="button" data-section="itau">Itau Bank</button>
+      <button class="side-button" type="button" data-section="athlete">Athlete</button>
+      <button class="side-button" type="button" data-section="usa">USA</button>
+    </section>
+  </main>
+
+  <!-- Hidden panel that appears when the user clicks an experience button. -->
+  <aside class="sheet" id="infoSheet" aria-hidden="true">
+    <!-- Header of the panel with title and close button. -->
+    <div class="sheet-header">
+      <h2 class="sheet-title" id="sheetTitle"></h2>
+      <button class="close-button" id="closeSheet" type="button">Close</button>
+    </div>
+
+    <!-- Text filled by JavaScript according to the selected button. -->
+    <div class="sheet-content" id="sheetContent"></div>
+  </aside>
+
+  <!-- Connects this HTML page with the external JavaScript file. -->
+  <script src="script.js"></script>
+</body>
+</html>

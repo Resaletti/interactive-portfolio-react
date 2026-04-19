@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Renato Saletti Santos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+  <main class="page contact-layout">
+    <nav class="top-menu" aria-label="Main navigation">
+      <a class="menu-button" href="index.html">Home</a>
+      <a class="menu-button" href="professional-experience.html">Professional Experience</a>
+      <a class="menu-button" href="education.html">Education and Skills</a>
+      <a class="menu-button" href="portfolio.html">Portfolio</a>
+      <a class="menu-button active" href="contact.html">Contact</a>
+    </nav>
+
+    <section class="contact-card" aria-label="Contact Renato">
+      <div class="contact-intro">
+        <p>Contact</p>
+        <h1>Let’s talk about opportunities, projects, or data-driven ideas.</h1>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <label>
+          Your name
+          <input id="contactName" type="text" name="name" placeholder="Your name">
+        </label>
+
+        <label>
+          Your email
+          <input id="contactEmail" type="email" name="email" placeholder="you@example.com">
+        </label>
+
+        <label>
+          Message
+          <textarea id="contactMessage" name="message" rows="6" placeholder="Write your message here"></textarea>
+        </label>
+
+        <button type="submit">Send Email</button>
+      </form>
+
+      <div class="contact-actions">
+        <a href="https://wa.me/14074531445" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="sms:+14074531445">SMS</a>
+        <a href="https://www.linkedin.com/in/renato-saletti-santos" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Resaletti" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById("contactName").value.trim();
+      const email = document.getElementById("contactEmail").value.trim();
+      const message = document.getElementById("contactMessage").value.trim();
+      const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+
+      window.location.href = `mailto:renatosaletti76@gmil.com?subject=Portfolio Contact&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>

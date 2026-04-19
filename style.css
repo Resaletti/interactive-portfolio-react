@@ -1,0 +1,98 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:Arial,Helvetica,sans-serif;color:#fff;overflow-x:hidden}
+.home-page{background:linear-gradient(120deg,rgba(54,156,184,.88),rgba(18,64,116,.9)),url("img/Foto.webp") center/cover no-repeat fixed}
+.experience-page{background:linear-gradient(120deg,rgba(20,48,58,.82),rgba(5,18,28,.78)),url("img/pexels.jpg") center/cover no-repeat fixed}
+.education-page{background:linear-gradient(120deg,rgba(20,48,58,.82),rgba(5,18,28,.78)),url("img/Skills1.jfif") center/cover no-repeat fixed}
+.portfolio-page{background:linear-gradient(120deg,rgba(22,35,36,.86),rgba(70,46,55,.78)),url("img/Codec1.png") center/cover no-repeat fixed}
+.contact-page{background:linear-gradient(120deg,rgba(18,60,64,.86),rgba(30,38,70,.8)),url("img/Social.jfif") center/cover no-repeat fixed}
+
+button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{font:inherit;cursor:pointer;border:0;border-radius:8px;text-decoration:none;transition:.2s ease}
+.menu-button,.side-button{color:#101820;background:rgba(255,255,255,.72);padding:10px 16px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.menu-button{display:inline-block}
+.menu-button.active,.menu-button:hover,.side-button:hover{background:#fff}
+.menu-button.active{font-weight:700}
+.menu-button:hover,.side-button:hover,.buttons a:hover,.contact-actions a:hover{transform:translateY(-2px)}
+
+.page{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 24px 48px;position:relative}
+.top-menu{position:absolute;top:24px;left:50%;transform:translateX(-50%);display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:min(980px,calc(100% - 32px));z-index:2}
+.profile-photo{width:300px;height:300px;border-radius:50%;object-fit:cover;box-shadow:0 18px 36px rgba(0,0,0,.28);margin-bottom:28px}
+.intro{max-width:780px;text-align:center;font-size:clamp(1.75rem,2.6rem,2.7rem);line-height:1.25;font-style:italic;text-shadow:0 4px 20px rgba(0,0,0,.35)}
+
+.section-layout,.portfolio-layout,.contact-layout{align-items:center;justify-content:flex-start}
+.section-layout{padding-top:90px}
+.section-header{max-width:720px;text-align:center;text-shadow:0 14px 20px rgba(0,0,0,.4)}
+.section-header h1,.portfolio-hero h1{font-size:2.8rem}
+.section-header h1{margin-bottom:12px}
+.section-header p{font-size:1.2rem;line-height:1.6}
+
+.portfolio-layout{padding-top:112px}
+#portfolio-root{width:min(1120px,100%)}
+.portfolio-hero{max-width:2000px;margin:0 auto 32px;text-align:center;text-shadow:0 12px 24px rgba(0,0,0,.36);animation:riseIn .7s ease both}
+.portfolio-hero p{margin-bottom:10px;color:#7ee0bf;font-weight:700;text-transform:uppercase}
+.portfolio-hero h1{line-height:1.12}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.portfolio-card{background:rgba(255,255,255,.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:.3s}
+.portfolio-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 0 30px rgba(59,130,246,.4)}
+.portfolio-card img{width:100%;aspect-ratio:16/10;display:block;object-fit:cover;transition:.32s ease}
+.portfolio-card:hover img{transform:scale(1.05)}
+.portfolio-card-content{padding:18px}
+.portfolio-card-content span{display:inline-block;margin-bottom:10px;font-size:.82rem;font-weight:700}
+.portfolio-card.mint span{color:#168762}
+.portfolio-card.coral span{color:#bd3c54}
+.portfolio-card.gold span{color:#8b6b00}
+.portfolio-card-content h2{margin-bottom:10px;font-size:1.28rem}
+.portfolio-card-content p{color:#f0f6f7;line-height:1.55}
+.portfolio-tags,.buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.buttons{gap:10px;margin-top:18px}
+.portfolio-tags small{padding:7px 9px;color:#182224;background:#edf3f1;border-radius:8px;font-size:.78rem;font-weight:700}
+.buttons a,.contact-actions a,.contact-form button{display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;color:#fff;background:linear-gradient(135deg,#3B82F6,#06B6D4);font-size:14px;font-weight:700}
+
+.contact-layout{padding-top:120px}
+.contact-card{width:min(760px,100%);padding:28px;color:#101820;background:rgba(255,255,255,.92);border-radius:8px;box-shadow:0 20px 48px rgba(0,0,0,.28)}
+.contact-intro{text-align:center;margin-bottom:22px}
+.contact-intro p{color:#168762;font-weight:700;text-transform:uppercase;margin-bottom:8px}
+.contact-intro h1{font-size:2.1rem;line-height:1.18}
+.contact-form{display:grid;gap:14px}
+.contact-form label{display:grid;gap:7px;font-weight:700}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;color:#101820;border:1px solid #d8e1e8;border-radius:8px;font:inherit}
+.contact-form textarea{resize:vertical}
+.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+
+.side-menu{position:fixed;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;width:240px;z-index:2}
+.side-button{width:100%;text-align:left}
+.sheet{position:fixed;top:220px;left:300px;right:32px;bottom:32px;overflow-y:auto;color:#101820;background:#fff;padding:28px;border-radius:8px;box-shadow:0 -16px 40px rgba(0,0,0,.28);transform:translateY(110%);opacity:0;transition:.35s ease;z-index:4}
+.sheet.open{transform:translateY(0);opacity:1}
+.sheet-header{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:960px;margin:0 auto 16px}
+.sheet-title{font-size:1.6rem}
+.close-button{color:#101820;background:#e7edf2;padding:8px 12px}
+.close-button:hover{background:#d8e1e8}
+.sheet-content{max-width:960px;margin:0 auto;font-size:1.08rem;line-height:1.65;text-align:left}
+.course-card{display:flex;gap:16px;padding:18px;margin-bottom:14px;background:#f3f7fa;border:1px solid #d8e1e8;border-radius:8px}
+.course-card:last-child{margin-bottom:0}
+.course-card-icon{flex:0 0 auto;width:44px;height:44px;display:grid;place-items:center;font-size:1.7rem;background:#fff;border-radius:8px}
+.course-card-icon img{width:28px;height:28px;object-fit:contain}
+.course-card-text h3{margin-bottom:8px;font-size:1.15rem}
+.course-card-text p+p{margin-top:8px}
+
+@keyframes riseIn{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+@media (max-width:900px){
+  .page{justify-content:flex-start;padding-top:156px}
+  .section-layout{align-items:center;padding-left:24px}
+  .side-menu{position:static;transform:none;width:min(100%,520px);margin-top:32px}
+  .side-button{text-align:center}
+  .portfolio-grid{grid-template-columns:1fr}
+  .portfolio-hero h1{font-size:2.35rem}
+  .sheet{top:auto;left:16px;right:16px;bottom:16px;max-height:calc(100vh - 32px)}
+}
+
+@media (max-width:520px){
+  .page{padding:176px 16px 32px}
+  .menu-button{width:100%;text-align:center}
+  .section-header h1{font-size:2.2rem}
+  .portfolio-layout{padding-top:212px}
+  .portfolio-hero h1{font-size:2rem}
+  .sheet{padding:22px 16px}
+  .sheet-header{align-items:flex-start;flex-direction:column}
+  .course-card{flex-direction:column}
+}
