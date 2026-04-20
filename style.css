@@ -76,9 +76,14 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
 
 @keyframes riseIn{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
 
-@media (max-width:900px){
-  .page{justify-content:flex-start;padding-top:156px}
-  .section-layout{align-items:center;padding-left:24px}
+@media (max-width:768px){
+  .home-page,.experience-page,.education-page,.portfolio-page,.contact-page{background-attachment:scroll}
+  .page{justify-content:flex-start;padding:140px 10px 36px}
+  .top-menu{flex-direction:column;align-items:center;gap:10px;width:calc(100% - 20px)}
+  .menu-button{width:100%;padding:12px;font-size:16px;text-align:center}
+  .profile-photo{width:180px;height:180px}
+  .intro{font-size:clamp(22px,5vw,40px);line-height:1.4;padding:0 10px}
+  .section-layout{align-items:center;padding-left:10px}
   .side-menu{position:static;transform:none;width:min(100%,520px);margin-top:32px}
   .side-button{text-align:center}
   .portfolio-grid{grid-template-columns:1fr}
@@ -87,8 +92,7 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
 }
 
 @media (max-width:520px){
-  .page{padding:176px 16px 32px}
-  .menu-button{width:100%;text-align:center}
+  .page{padding:212px 16px 32px}
   .section-header h1{font-size:2.2rem}
   .portfolio-layout{padding-top:212px}
   .portfolio-hero h1{font-size:2rem}
