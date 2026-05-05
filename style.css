@@ -4,6 +4,7 @@ body{min-height:100vh;font-family:Arial,Helvetica,sans-serif;color:#fff;overflow
 .experience-page{background:linear-gradient(120deg,rgba(20,48,58,.82),rgba(5,18,28,.78)),url("img/pexels.jpg") center/cover no-repeat fixed}
 .education-page{background:linear-gradient(120deg,rgba(20,48,58,.82),rgba(5,18,28,.78)),url("img/Skills1.jfif") center/cover no-repeat fixed}
 .portfolio-page{background:linear-gradient(120deg,rgba(22,35,36,.86),rgba(70,46,55,.78)),url("img/Codec1.png") center/cover no-repeat fixed}
+.projects-page{background:linear-gradient(120deg,rgba(16,42,45,.88),rgba(37,48,69,.82)),url("img/Data Dashboards.jfif") center/cover no-repeat fixed}
 .contact-page{background:linear-gradient(120deg,rgba(18,60,64,.86),rgba(30,38,70,.8)),url("img/Social.jfif") center/cover no-repeat fixed}
 
 button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{font:inherit;cursor:pointer;border:0;border-radius:8px;text-decoration:none;transition:.2s ease}
@@ -18,7 +19,7 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
 .profile-photo{width:300px;height:300px;border-radius:50%;object-fit:cover;box-shadow:0 18px 36px rgba(0,0,0,.28);margin-bottom:28px}
 .intro{max-width:780px;text-align:center;font-size:clamp(1.75rem,2.6rem,2.7rem);line-height:1.25;font-style:italic;text-shadow:0 4px 20px rgba(0,0,0,.35)}
 
-.section-layout,.portfolio-layout,.contact-layout{align-items:center;justify-content:flex-start}
+.section-layout,.portfolio-layout,.projects-layout,.contact-layout{align-items:center;justify-content:flex-start}
 .section-layout{padding-top:90px}
 .section-header{max-width:720px;text-align:center;text-shadow:0 14px 20px rgba(0,0,0,.4)}
 .section-header h1,.portfolio-hero h1{font-size:2.8rem}
@@ -46,6 +47,48 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
 .buttons{gap:10px;margin-top:18px}
 .portfolio-tags small{padding:7px 9px;color:#182224;background:#edf3f1;border-radius:8px;font-size:.78rem;font-weight:700}
 .buttons a,.contact-actions a,.contact-form button{display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;color:#fff;background:linear-gradient(135deg,#3B82F6,#06B6D4);font-size:14px;font-weight:700}
+.portfolio-card .buttons a:first-child{flex:1 1 150px;min-height:42px;background:linear-gradient(135deg,#10b981,#06b6d4);box-shadow:0 10px 22px rgba(6,182,212,.28);text-transform:uppercase;letter-spacing:.04em}
+.portfolio-card .buttons a:first-child:hover{box-shadow:0 14px 28px rgba(16,185,129,.36)}
+
+.projects-layout{padding-top:112px}
+.projects-hero{width:min(1160px,100%);display:grid;grid-template-columns:1.25fr .75fr;align-items:end;gap:28px;margin-bottom:24px;text-shadow:0 12px 24px rgba(0,0,0,.36)}
+.hero-copy p,.story-framework>div>p{margin-bottom:10px;color:#7ee0bf;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.hero-copy h1{font-size:clamp(2.2rem,5vw,4.7rem);line-height:1.02;max-width:880px}
+.hero-scoreboard{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;color:#101820;background:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.3);border-radius:8px;box-shadow:0 18px 44px rgba(0,0,0,.24)}
+.hero-scoreboard div{padding:18px 14px;text-align:center}
+.hero-scoreboard div+div{border-left:1px solid #d9e5e7}
+.hero-scoreboard strong{display:block;color:#12353a;font-size:1.75rem;line-height:1}
+.hero-scoreboard span{display:block;margin-top:8px;color:#4d5d61;font-size:.78rem;font-weight:700;text-transform:uppercase}
+.dashboard-gallery{width:min(1160px,100%);display:grid;gap:18px}
+.dashboard-case{display:grid;grid-template-columns:minmax(300px,.72fr) 1.28fr;overflow:hidden;color:#101820;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.26);border-radius:8px;box-shadow:0 22px 54px rgba(0,0,0,.28)}
+.dashboard-case:nth-child(even){grid-template-columns:1.28fr minmax(300px,.72fr)}
+.dashboard-case:nth-child(even) .case-media{order:2}
+.case-media{position:relative;min-height:330px;background:#101820}
+.case-media img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(1.08) contrast(1.04)}
+.case-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,24,32,0),rgba(16,24,32,.72))}
+.case-media span{position:absolute;left:18px;bottom:18px;z-index:1;padding:8px 10px;color:#fff;border:1px solid rgba(255,255,255,.36);border-radius:8px;font-size:.8rem;font-weight:800;text-transform:uppercase;background:rgba(16,24,32,.5)}
+.case-body{padding:28px;display:flex;flex-direction:column;justify-content:center}
+.case-heading p{margin-bottom:8px;font-size:.78rem;font-weight:800;text-transform:uppercase}
+.financial-case .case-heading p{color:#168762}
+.logistics-case .case-heading p{color:#bd3c54}
+.market-case .case-heading p{color:#8b6b00}
+.case-heading h2{font-size:clamp(1.6rem,3vw,2.55rem);line-height:1.08;margin-bottom:12px;color:#101820}
+.case-body>p{max-width:760px;color:#314145;line-height:1.62}
+.case-kpis{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.case-kpis span{padding:8px 10px;color:#12353a;background:#edf4f5;border:1px solid #d9e7e9;border-radius:8px;font-size:.78rem;font-weight:800;text-transform:uppercase}
+.case-story{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0}
+.case-story div{padding-top:14px;border-top:3px solid #d7e4e6}
+.case-story dt{margin-bottom:6px;color:#12353a;font-weight:800}
+.case-story dd{margin:0;color:#415154;font-size:.94rem;line-height:1.48}
+.case-actions{margin-top:22px}
+.case-actions a{min-height:42px;padding-left:18px;padding-right:18px;text-transform:uppercase;letter-spacing:.04em}
+.story-framework{width:min(1160px,100%);display:grid;grid-template-columns:.72fr 1.28fr;gap:24px;margin-top:18px;padding:28px;color:#101820;background:rgba(255,255,255,.94);border-radius:8px;box-shadow:0 18px 44px rgba(0,0,0,.22)}
+.story-framework h2{font-size:clamp(1.45rem,3vw,2.15rem);line-height:1.14}
+.framework-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none}
+.framework-steps li{padding:14px;background:#f2f7f7;border:1px solid #d8e6e8;border-radius:8px}
+.framework-steps span{display:block;margin-bottom:10px;color:#168762;font-weight:800}
+.framework-steps strong{display:block;margin-bottom:8px}
+.framework-steps p{color:#415154;line-height:1.45}
 
 .contact-layout{padding-top:120px}
 .contact-card{width:min(760px,100%);padding:28px;color:#101820;background:rgba(255,255,255,.92);border-radius:8px;box-shadow:0 20px 48px rgba(0,0,0,.28)}
@@ -77,7 +120,7 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
 @keyframes riseIn{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
 
 @media (max-width:768px){
-  .home-page,.experience-page,.education-page,.portfolio-page,.contact-page{background-attachment:scroll}
+  .home-page,.experience-page,.education-page,.portfolio-page,.projects-page,.contact-page{background-attachment:scroll}
   .page{justify-content:flex-start;gap:20px;padding:16px 10px 36px}
   .top-menu{position:static;transform:none;flex-direction:column;align-items:center;gap:10px;width:100%}
   .menu-button{width:100%;padding:12px;font-size:16px;text-align:center}
@@ -88,6 +131,9 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
   .side-button{text-align:center}
   .portfolio-grid{grid-template-columns:1fr}
   .portfolio-hero h1{font-size:2.35rem}
+  .projects-hero,.story-framework{grid-template-columns:1fr;text-align:center}
+  .hero-scoreboard,.dashboard-case,.dashboard-case:nth-child(even),.case-story,.framework-steps{grid-template-columns:1fr}
+  .dashboard-case:nth-child(even) .case-media{order:0}
   .sheet{top:auto;left:16px;right:16px;bottom:16px;max-height:calc(100vh - 32px)}
 }
 
@@ -95,7 +141,12 @@ button,.menu-button,.side-button,.close-button,.buttons a,.contact-actions a{fon
   .page{padding:16px 10px 32px}
   .section-header h1{font-size:2.2rem}
   .portfolio-layout{padding-top:16px}
+  .projects-layout{padding-top:16px}
   .portfolio-hero h1{font-size:2rem}
+  .projects-hero h1{font-size:2.2rem}
+  .case-body,.story-framework{padding:18px}
+  .case-media{min-height:230px}
+  .hero-scoreboard div+div{border-left:0;border-top:1px solid #d9e5e7}
   .sheet{padding:22px 16px}
   .sheet-header{align-items:flex-start;flex-direction:column}
   .course-card{flex-direction:column}

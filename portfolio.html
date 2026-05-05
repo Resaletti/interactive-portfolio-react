@@ -37,7 +37,7 @@
         image: "img/Data Dashboards.jfif",
         summary: "Interactive dashboards focused on clean KPIs, practical insights, and decision-ready reporting.",
         tools: ["Power BI", "SQL", "Excel", "Data Cleaning"],
-        liveDemo: "https://github.com/Resaletti/stock-market-analysis-dashboard",
+        liveDemo: "projects.html",
         github: "https://github.com/Resaletti",
         accent: "mint"
       },
@@ -64,6 +64,8 @@
     ];
 
     function ProjectCard({ project, index }) {
+      const opensNewTab = project.liveDemo.startsWith("http");
+
       return (
         <article
           className={`portfolio-card ${project.accent}`}
@@ -80,7 +82,13 @@
               ))}
             </div>
             <div className="buttons">
-              <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a
+                href={project.liveDemo}
+                target={opensNewTab ? "_blank" : undefined}
+                rel={opensNewTab ? "noopener noreferrer" : undefined}
+              >
+                View Projects
+              </a>
               <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
@@ -93,9 +101,7 @@
         <section className="portfolio-app" aria-label="Portfolio projects">
           <header className="portfolio-hero">
             <p>Selected Work</p>
-            <h1>Selected Work
-
-            Projects designed to simulate real-world applications, combining data analysis, modern interfaces, and problem-solving.</h1>
+            <h1>Projects designed to simulate real-world applications, combining data analysis, modern interfaces, and problem-solving.</h1>
           </header>
 
           <section className="portfolio-grid">
