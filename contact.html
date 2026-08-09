@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="description"
+    content="Get in touch with Renato Saletti Santos for opportunities in Data Analytics, Business Intelligence, Power BI, SQL, and Front-End Development.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="keywords"
+    content="Contact, Data Analyst, Power BI Developer, Front-End Developer, Renato Saletti Santos">
+    <meta name="author" content="Renato Saletti Santos">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A0A0F">
+    <meta property="og:title"
+      content="Contact | Renato Saletti Santos">
+    <meta property="og:description"
+      content="Let's connect! Contact Renato Saletti Santos for opportunities in Data Analytics, Business Intelligence and Front-End Development.">
+    <meta property="og:url"
+      content="https://interactive-portfolio-react.vercel.app/contact.html">
+    <meta property="og:image"
+      content="https://interactive-portfolio-react.vercel.app/img/og-contact.jpg">
+
+  <title>Contact | Renato Saletti Santos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://interactive-portfolio-react.vercel.app/contact.html">
+  <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body class="contact-page">
+  <main class="page contact-layout">
+     <nav>
+    <div class="nav-logo">R.SANTOS</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="professional-experience.html">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Let’s Work Together</a>
+    <a href="/documents/TI_Renalto Santos.docx" target="_blank" rel="noopener noreferrer" class="nav-resume">Resume</a>
+    <a href="/documents/ADM_Cover.docx" target="_blank" rel="noopener noreferrer" class="nav-CoverLetter">Cover Letter</a>
+  </nav>
+
+    <section class="contact-card" aria-label="Contact Renato">
+      <div class="contact-intro">
+        <p>Contact</p>
+        <h1>Let’s talk about opportunities, projects, or data-driven ideas.</h1>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <label>
+          Your name
+          <input id="contactName" type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Your email
+          <input id="contactEmail" type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label>
+          Message
+          <textarea id="contactMessage" name="message" rows="6" placeholder="Write your message here" required></textarea>
+        </label>
+
+        <button id="contactSubmit" type="submit">Send Email</button>
+
+        <div class="contact-actions">
+          <a href="https://wa.me/14074531445" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="sms:+14074531445">SMS</a>
+          <a href="https://www.linkedin.com/in/renato-saletti-santos" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/Resaletti" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const submitButton = document.getElementById("contactSubmit");
+
+  emailjs.init({
+    publicKey: "DqMiCsxD96SMjdPRU"
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
+
+    // 🛑 VALIDAÇÃO
+    if (!name || !email || !message) {
+      showMessage("Please fill all fields", "error");
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    try {
+      await emailjs.send(
+        "renatosaletti76",
+        "template_gvaycdg",
+        {
+          name: name,
+          email: email,
+          message: message,
+          from_name: name,
+          from_email: email,
+          reply_to: email
+        }
+      );
+
+      form.reset();
+      showMessage("Message sent successfully 🚀", "success");
+
+    } catch (error) {
+      console.error("EMAIL ERROR:", error);
+      showMessage("Error sending message. Try again later.", "error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Send Email";
+    }
+  });
+
+  // 🎨 FUNÇÃO DE MENSAGEM PROFISSIONAL
+  function showMessage(text, type) {
+    const existing = document.querySelector(".form-message");
+    if (existing) existing.remove();
+
+    const msg = document.createElement("div");
+    msg.className = `form-message ${type}`;
+    msg.innerText = text;
+
+    form.appendChild(msg);
+
+    setTimeout(() => {
+      msg.remove();
+    }, 4000);
+  }
+});
+</script>
+</body>
+</html>

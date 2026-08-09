@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://interactive-portfolio-react.vercel.app//sitemap.xml

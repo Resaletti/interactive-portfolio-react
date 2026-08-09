@@ -1,0 +1,16 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Backups
+*_backup.*
+backup/
