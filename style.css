@@ -1167,11 +1167,10 @@ section {
 
 .project-cover img {
     width: 100%;
-    max-width: 1000px;
-    max-height: 520px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center center;
+    max-width: 800px;
+    height: auto;
+    max-height: 500px;
+    aspect-ratio: auto;
     display: block;
     margin: 0 auto;
     border-radius: 24px;
@@ -1430,12 +1429,13 @@ section {
     border-radius:20px;
     position:relative;
     aspect-ratio:16 / 9;
+    background:var(--surface);
 }
 
 .showcase-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display:block;
   transition:
     transform 0.4s ease,
@@ -1443,11 +1443,6 @@ section {
 }
 
 .showcase-card:hover .showcase-image img {
-
-  transform:
-    scale(1.04)
-    rotate(0.6deg);
-
   filter:
     brightness(1.08)
     saturate(1.05);
@@ -1457,11 +1452,8 @@ section {
 
 .showcase-image::after {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   background:
     linear-gradient(
       to top,
@@ -1487,9 +1479,9 @@ section {
 
 .gallery-grid img {
     width: 100%;
-    max-height: 420px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    height: 300px;
+    max-height: none;
+    aspect-ratio: auto;
     display: block;
     border-radius: 18px;
     border: 1px solid var(--border);
@@ -1498,7 +1490,7 @@ section {
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
 
 /* =========================================
@@ -1519,29 +1511,18 @@ section {
 
 .showcase-category {
   display: inline-flex;
-
   align-items: center;
-
   width: fit-content;
-
   padding: 8px 14px;
-
   border-radius: 999px;
-
   background:
-    rgba(110,231,183,0.08);
-
+   rgba(110,231,183,0.08);
   border:
-    1px solid rgba(110,231,183,0.15);
-
+   1px solid rgba(110,231,183,0.15);
   color: var(--accent);
-
   font-size: 0.72rem;
-
   letter-spacing: 1px;
-
   text-transform: uppercase;
-
   font-weight: 600;
 }
 
@@ -1584,18 +1565,13 @@ section {
 
 .showcase-tags span {
   padding: 8px 14px;
-
   border-radius: 999px;
-
   background:
     rgba(255,255,255,0.05);
-
   border:
     1px solid rgba(255,255,255,0.08);
-
   color:
     rgba(255,255,255,0.82);
-
   font-size: 0.78rem;
 }
 
@@ -1605,9 +1581,7 @@ section {
 
 .showcase-buttons {
   display: flex;
-
   gap: 14px;
-
   margin-top: auto;
 }
 
@@ -1784,13 +1758,14 @@ section {
 
   border-bottom:
     1px solid rgba(255,255,255,0.06);
+  background: var(--surface);
 }
 
 .modal-image img {
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* =========================================

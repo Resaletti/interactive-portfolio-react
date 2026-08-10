@@ -176,24 +176,6 @@ Feel free to explore the source code and use it as inspiration for your own proj
 
 ---
 
-# 📈 GitHub Statistics
-
-<p align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Resaletti&show_icons=true&theme=transparent&hide_border=true"/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Resaletti&layout=compact&theme=transparent&hide_border=true"/>
-
-</p>
-
-<p align="center">
-
-<img src="https://komarev.com/ghpvc/?username=Resaletti&style=for-the-badge&color=00C853">
-
-</p>
-
----
-
 <p align="center">
 
 ⭐ If you enjoyed this project, consider giving it a star on GitHub.
